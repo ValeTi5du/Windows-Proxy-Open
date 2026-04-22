@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Запуск настроек прокси</title>
+    <script>
+        window.onload = function() {
+            // Попытка открыть настройки Windows
+            window.location.href = "ms-settings:network-proxy";
+            
+            // Сообщение для пользователя, если браузер заблокировал автозапуск
+            setTimeout(function() {
+                document.body.innerHTML = '<h1>Если настройки не открылись, <a href="ms-settings:network-proxy">нажмите здесь</a></h1>';
+            }, 500);
+        };
+    </script>
+</head>
+<body>
+    <h1>Перенаправляем в настройки Windows...</h1>
+</body>
+</html>
